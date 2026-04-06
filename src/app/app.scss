@@ -1,0 +1,217 @@
+﻿:host {
+  display: block;
+  min-height: 100dvh;
+  background: #eef2ff;
+  color: #0f172a;
+  font-family: Inter, system-ui, sans-serif;
+  padding: 1.5rem;
+}
+
+.app-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: #e2e8f0;
+  border: none;
+  border-radius: 0.85rem;
+  padding: 0.85rem 1.25rem;
+  font: inherit;
+  cursor: pointer;
+  color: #475569;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tab.active {
+  background: #4338ca;
+  color: white;
+}
+
+.tab:hover {
+  background: #c7d2fe;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  color: white;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  opacity: 0.88;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.hero p {
+  margin-top: 1rem;
+  line-height: 1.8;
+  max-width: 36rem;
+}
+
+.grid-panel {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.panel {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.08);
+}
+
+.form-panel h2,
+.list-panel h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid #cbd5e1;
+  background: #f9fafb;
+  color: #0f172a;
+  font: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+button {
+  min-height: 3rem;
+  border: none;
+  border-radius: 0.9rem;
+  padding: 0 1.25rem;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  color: white;
+  background: #4338ca;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+button.secondary {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+thead th {
+  text-align: left;
+  padding: 0.95rem 0.75rem;
+  color: #475569;
+  font-weight: 700;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr.clickable-row {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+tbody tr.clickable-row:hover {
+  background: #f8fafc;
+}
+
+td {
+  padding: 0.95rem 0.75rem;
+  vertical-align: middle;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button.icon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  min-width: 5rem;
+}
+
+button.icon-button .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+}
+
+button.edit {
+  background: #2563eb;
+}
+
+button.delete {
+  background: #dc2626;
+}
+
+.empty {
+  margin: 0;
+  color: #475569;
+}
+
+@media (min-width: 768px) {
+  .grid-panel {
+    grid-template-columns: 1.05fr 1fr;
+  }
+}
